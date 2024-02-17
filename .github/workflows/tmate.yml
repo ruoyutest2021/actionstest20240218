@@ -16,7 +16,7 @@ on:
         required: true
 
 jobs:
-  build:
+  tmate:
     runs-on: ${{ inputs.runs-on }}
     steps:
     - uses: mxschmitt/action-tmate@v3
