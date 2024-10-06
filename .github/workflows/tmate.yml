@@ -7,9 +7,11 @@ on:
         type: choice
         description: GitHub-hosted runner to use
         options:
-          - ubuntu-latest
-          - windows-latest
-          - macos-11
+          - ubuntu-20.04
+          - ubuntu-22.04
+          - ubuntu-24.04
+          - windows-2019
+          - windows-2022
           - macos-12
           - macos-13
           - macos-14
@@ -21,3 +23,5 @@ jobs:
     runs-on: ${{ inputs.runs-on }}
     steps:
     - uses: mxschmitt/action-tmate@v3
+      with:
+        limit-access-to-actor: true
